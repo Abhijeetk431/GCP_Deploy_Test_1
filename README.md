@@ -66,12 +66,16 @@ After applying following resources get created in GCP
 - Subnet
   ![Subnet](./images/subnet.jpg)
 - Instance Group Template
-  ![Git ignore](./images/igt.jpg)
+  ![Instance Group Template](./images/igt.jpg)
 - Instance Group
-  ![Git ignore](./images/ig.jpg)
+  ![Instance Group](./images/ig.jpg)
 - Test VMs
 
   - VM1
-    ![Git ignore](./images/vm1.jpg)
+    ![VM1](./images/vm1.jpg)
   - VM2
-    ![Git ignore](./images/vm2.jpg)
+    ![VM2](./images/vm2.jpg)
+
+- Auto scaling
+  When added workload on one of the VMs using `stress --cpu 1 --timeout 60`, auto scaling got triggered and the total numbers of VMs in the instance group increased to 5 (Max limit). And then after a cooldown period, the number came back to 2 (Min limit).
+  ![Autoscaling](./images/autoscaling.jpg)
